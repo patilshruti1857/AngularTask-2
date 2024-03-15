@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="col-sm-12 card">
+    <div class="row ">
+      <div class="col-sm-12 form-row mt-4 pl-3">
+        <div class="col-sm-6 ">
+          <label for="first">First Name</label>
+          <input type="text" class="form-control" id="first" placeholder="">
+        </div>
+        <div class="col-sm-">
+          <label for="last">Last Name</label>
+          <input type="text" class="form-control" id="last" placeholder="">
+        </div>
+      </div>
+      <div class="col-sm-6 mt-2 form-group">
+        <label for="">How should we contact you?</label>
+        <select class="form-control" id="college" [(ngModel)]="selectedValue" name="_name" required>
+          <option selected >choose options</option>
+          <option value="phone">phone</option>
+          <option value="email">email</option>
+        </select>
+      </div>
+      <div class="col-sm-6 mt-2 form-group" *ngIf="selectedValue == 'phone'">
+        <label for="phoneName">Phone number</label>
+        <input type="text" class="form-control" id="phoneName" ngModel name="[phone_name" required>
+      </div>
+      <div class="col-sm-6 mt-2 form-group" *ngIf="selectedValue == 'email'">
+        <label for="EmailName">Email</label>
+        <input type="text" class="form-control" id="EmailName" ngModel name="email_name" required>
+      </div>
+    </div>    
+  </div>
+  </div>
+  
+    
+  
+
+ 

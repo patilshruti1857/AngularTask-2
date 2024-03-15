@@ -1,0 +1,95 @@
+<!-- <div class="container mt-2">
+    <div class="col-12 card">
+        <form>
+            <div class="form-row mt-4">
+              <div class="col ">
+                <label for="first">First Name</label>
+                <input type="text" class="form-control" id="first" placeholder="">
+              </div>
+              <div class="col">
+                <label for="last">Last Name</label>
+                <input type="text" class="form-control" id="last" placeholder="">
+              </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col ">
+                    <label for="">How should we contact you?</label><br>
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button value="1">Option 1</mat-radio-button>
+                        <mat-radio-button value="2">Option 2</mat-radio-button>
+                      </mat-radio-group>     
+                </div>     
+              </div>
+          </form>  
+    </div>
+     
+</div> -->
+
+<!-- <div class="container mt-2">
+    <div class="col-12 card">
+        <form>
+            <div class="form-row mt-4">
+              <div class="col ">
+                <label for="first">First Name</label>
+                <input type="text" class="form-control" id="first" placeholder="">
+              </div>
+              <div class="col">
+                <label for="last">Last Name</label>
+                <input type="text" class="form-control" id="last" placeholder="">
+              </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col ">
+                    <label for="">How should we contact you?</label><br>
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button value="1" >Option 1</mat-radio-button>
+                        <mat-radio-button value="2">Option 2</mat-radio-button>
+                      </mat-radio-group>     
+                </div> 
+                <div class="col">
+                    <label for="last">Phone Number</label>
+                    <input type="text" class="form-control" id="last" placeholder="">
+                  </div>        
+              </div>
+          </form>  
+    </div>
+     
+</div> -->
+
+
+
+
+<div class="container mt-2">
+  <div class="col-sm-12 card pt-2">
+     <form #myForm="ngForm">
+      <div class="row">
+        <div class="col-sm-12 form-row mt-4 pl-3">
+          <div class="col-sm-6 ">
+            <label for="first">First Name</label>
+            <input type="text" class="form-control" id="first" placeholder="">
+          </div>
+          <div class="col-sm-6">
+            <label for="last">Last Name</label>
+            <input type="text" class="form-control" id="last" placeholder="">
+          </div>
+        </div>
+        <div class="col-sm-6 mt-3 mb-3">
+          <label for="">How should we contact you?</label><br>
+          <input type="radio"   name="name" value="phone" [(ngModel)]="method" >option1
+          <input type="radio"  name="name" value="email" [(ngModel)]="method" >option2
+        </div>
+        <div class="col-sm-6 ">
+          <div *ngIf="method==='phone'">
+            <label for="phoneName">Phone number</label>
+            <input type="text"  class="form-control" id="phoneName" name="phonenumber" placeholder="phone number" ngModel>
+        </div>
+        <div *ngIf="method==='email'">
+          <label for="emailName">Email</label>
+          <input type="email"  class="form-control"id="emailName" name="emailnumber" placeholder="email" ngModel>
+      </div>
+        </div>        
+      </div>
+     </form>
+  </div>
+</div>
+
